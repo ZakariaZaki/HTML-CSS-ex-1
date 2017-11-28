@@ -1,0 +1,39 @@
+.ball {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #000000;
+  animation:
+  color 5s ease infinite alternate running,
+  bounce 10s ease infinite alternate running;
+}
+
+@keyframes color {
+  0%   {
+    background-color: #00b09b;
+  }
+  100% {
+    background-color: #96c93d;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform:
+      translate(10rem,10rem)
+      scale(2);
+  }
+  50% {
+    transform: translate(30rem, 20rem);
+  }
+  100% {
+    transform:
+      translate(50rem, 10rem)
+      scale(3);
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
